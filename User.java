@@ -1,15 +1,18 @@
-import java.awt.*;
-
 public class User {
-    public String BillCode;
-    public String GetDate;
-    public String BillMonth;
-    public String MunicipalTax;
-    public String ServiceTax;
-    public String PaymentMode;
-    public String BillCycle;
+
+    public String MemberId;
+    public String FirstName;
+    public String MiddleName;
+    public String LastName;
+    public String DateOfBirth;
+    public String FlatNo;
+    public String TellPhoneNo;
+    public String Contact1;
+    public String Contact2;
+    public String EmailId1;
+    public String EmailId2;
+    public String MemberDescription;
+    public String ParkingLot;
     public String MasterCode;
     public String MasterType;
-    public String MemberId;
-    public String parkingcharges;
 }

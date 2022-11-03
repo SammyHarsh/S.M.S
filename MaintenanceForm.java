@@ -40,8 +40,8 @@ public class MaintenanceForm extends JDialog
         super(parent);
         setTitle("Maintenance Form");
         setContentPane(Maintenance);
-        setMaximumSize(new Dimension(500, 600));
-        setSize(500,600);
+        setMaximumSize(new Dimension(700, 490));
+        setSize(700,490);
         setModal(true);
         datechos.setDateFormatString("yyyy/MM/dd");
         Jcal.add(datechos);
@@ -188,10 +188,10 @@ while (rs.next()){
 
         }
 
-    public User maintenance;
+    public MUser maintenance;
 
-    private User addDataToDatabase(String BillCode, String GetDate, String BillMonth, String MunicipalTax, String ServiceTax, String PaymentMode, String BillCycle, String MasterCode, String MasterType, String MemberId, String parkingcharges) {
-        User User = null;
+    private MUser addDataToDatabase(String BillCode, String GetDate, String BillMonth, String MunicipalTax, String ServiceTax, String PaymentMode, String BillCycle, String MasterCode, String MasterType, String MemberId, String parkingcharges) {
+        MUser User = null;
         final String DB_URL = "jdbc:mysql://localhost:3306/sms";
         final String USERNAME = "root";
         final String PASSWORD = "123456";
@@ -219,7 +219,7 @@ while (rs.next()){
           //  JOptionPane.showMessageDialog(this,prepareStatement);
         int addedRows = (prepareStatement).executeUpdate();
         if (addedRows>0){
-            maintenance = new User();
+            maintenance = new MUser();
             maintenance.BillCode = BillCode;
             maintenance.GetDate = GetDate;
             maintenance.BillMonth = BillMonth;
@@ -247,7 +247,7 @@ while (rs.next()){
 
         MaintenanceForm myform = new MaintenanceForm(  null);
 
-        User maintenance = myform.maintenance;
+        MUser maintenance = myform.maintenance;
         if(maintenance!=null){
             System.out.println("Record Added Successfully For Bill Number:" + maintenance.BillCode);
         }

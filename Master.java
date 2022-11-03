@@ -18,6 +18,7 @@ public class Master extends JDialog
     private JPanel MasterJ;
 
 
+
     public Master() {
 
 
@@ -44,7 +45,7 @@ public class Master extends JDialog
         String MasterDesc = tfmasterdescription.getText();
 
 
-        if (MasterCode.isEmpty() || MasterType.isEmpty() || MasterDesc.isEmpty())
+        if (MasterCode.isEmpty() || MasterType.isEmpty() || MasterDesc.isEmpty()  )
         {
             JOptionPane.showMessageDialog( this,
                     "Please enter all fields, Can not be empty",
@@ -95,6 +96,9 @@ public class Master extends JDialog
             prepareStatement.setString( 1,mastercode);
             prepareStatement.setString( 2,mastertype);
             prepareStatement.setString( 3,masterdescription);
+
+
+            ;
 
             //    JOptionPane.showMessageDialog(this,prepareStatement);
 
